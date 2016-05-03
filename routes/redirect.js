@@ -44,3 +44,5 @@ function redirect(suffix) {
     );
   });
 }
+
+module.exports = router;
