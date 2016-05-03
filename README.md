@@ -9,6 +9,8 @@ Make sure to have the following environment variables:
 Run `npm start`
 
 # How it works
+A demo on my phone.
+
 ![alt text](./public/demo.gif)
 
 # Contribution
