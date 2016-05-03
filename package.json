@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "test": "grunt jshint",
-    "start": "node ./bin/www"
+    "start": "npm prune && npm install && npm test && node ./bin/www"
   },
   "dependencies": {
     "async": "^2.0.0-rc.3",
