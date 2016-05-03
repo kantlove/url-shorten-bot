@@ -16,11 +16,13 @@
 # npm start
 # "
 # screen -X -S "msg_bot" stuff "${cmd}"
-
-cd ~/webapp/url-shorten-bot/
-eval $(ssh-agent -s)
-ssh-add ~/.ssh/git
-git pull
-npm start
+echo <<EOF
+    cd ~/webapp/url-shorten-bot/
+    eval $(ssh-agent -s)
+    ssh-add ~/.ssh/git
+    git pull
+    npm start
+    
+EOF
 
 
