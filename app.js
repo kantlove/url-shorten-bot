@@ -9,6 +9,7 @@ var worker = require('./services/worker.js');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var webhook = require('./routes/webhook');
+var redirect = require('./routes/redirect');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/webhook', webhook);
+app.use('/r', redirect);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

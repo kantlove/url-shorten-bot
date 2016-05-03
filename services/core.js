@@ -152,7 +152,7 @@ function createSuffix () {
 }
 
 function makeUrl (suffix) {
-  return domain + '/' + suffix;
+  return domain + '/r/' + suffix;
 }
 
 module.exports = new Core();
