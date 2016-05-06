@@ -35,9 +35,19 @@ Mysql.prototype.init = function () {
     connection.query('USE ' + database_name, function (err) {
       if(err)
         throw err;
-      debug.log('MySql connected.')
+      debug.log('MySql connected.');
+
+      keepAlive();
     });
   }
+}
+
+// Keep the mysql connection alive forever
+function keepAlive() {
+  // Run a random query every 5s
+  setInterval(function () {
+    connection.query('SELECT 1');
+  }, 5000);
 }
 
 function createConnection() {
