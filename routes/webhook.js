@@ -59,7 +59,7 @@ router.post('/', function (req, res) {
 
 function normalize(url) {
   if(url)
-    return url.trim().toLowerCase();
+    return url.trim();
   return url; // null, empty, etc.
 }
 
